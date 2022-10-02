@@ -1,0 +1,19 @@
+1.Given the Contacts table below, write a SQL statement to get all contacts that have both email and phone values populated
+
+Select email, phone 
+From Contacts
+Where email IS NOT NULL AND phone IS NOT NULL;
+
+2.Given the Users table below, write a SQL statement to get the count of users per groupId
+
+Select count(*) as Total_Users
+From users
+GROUP BY groupId;
+
+
+3.Given the Customers and Orders table below, write a SQL statement to get the customerName, orderId and orderDate in a single dataset
+
+Select Customers.customerName, Orders.orderId, Orders.orderDate
+From Customers, Orders
+Where Customers.customerId = Orders.CustomerId
+ORDER BY customerName;
